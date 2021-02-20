@@ -1,0 +1,10 @@
+white = #dfdfdf #ffffff #dfdfdf
+black = #141618 #292e32 #181a1f
+gray = #2b2b2b #989898 #4d4d4d
+red = #f44336
+green = #1cdc9a
+yellow = #fdbc4b
+blue = #1d99f3
+purple = #8e44ad
+greenish = #2d9a3d
+purewhite = #ffffff

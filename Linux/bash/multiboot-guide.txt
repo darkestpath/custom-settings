@@ -1,0 +1,68 @@
+The Ultimate Multiboot Guide
+
+- One HDD
+- MBR Partition Scheme
+
+1. Check System
+----------------
+To create a Multiboot System 
+First we need to check if we have UEFI or Legacy
+
+> Usually UEFI goes with GPT Partitions table
+> Legacy goes with MBR Partitions table
+
+
+2. Partition Tools
+--------------------------------
+To create a partiton table 
+> i recommand using Gparted for this, you can get gparted iso to live boot
+> or you can use any linux Distro live boot iso
+> or if you are installing windows too then you can use command line tool.
+
+
+
+3. Layout of partitions
+-----------------------
+
+|--Primary--||-------------Extended-------------|
+_________________________________________________
+|  windows	||	files	||	linux-1	|	linux-2	|
+|  P(70GB)	||	L(-)	||	L(50GB)	|	L(50GB)	|
+_________________________________________________
+
+P = Parimary Partition
+L = Logical Partition
+
+> in MBR, there can only be 4 primary partitions.
+> Or there can be 3 primary partitions and one extended partition.
+> Logical Partitions are inside the Extended Partiton.
+
+####
+
+This layout is designed in a way that you can expand the partitions
+and can create as many as paritionns you want after the files partiton.
+
+You just need to shrink the files partition to create a room for other
+partition and if you dont want the partion then simply delete the partition 
+and add it to the files partiton.
+But you can do this to only the partition that is just after the files partition.
+
+The recommanded sizes are shown in the layout.
+Note that files partition size can very on how space is used for other partitions.
+
+
+--------- Tips -----------
+
+Install windows First (which is, if you install)
+
+---------------------------
+
+If you have multiboot with Windows then
+> Disable the fast boot option in windows 10.
+
+(it causes the to partitons in linux to mount as read only
+and you cant write and create files and folders in partitions)
+
+control center > power option > show unavilable options > turn off fastboot
+
+-----------------------------

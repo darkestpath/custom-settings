@@ -1,0 +1,7 @@
+ gloable = Breez Dark
+plasma = chromeos
+window decoration = McMojave
+gtk style = Mcata-dark-solid-alt
+color = chromeosdark
+icons = Papirus-Dark
+cursor = breez lite

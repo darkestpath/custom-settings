@@ -1,0 +1,65 @@
+## custmization of bash command prompt
+
+## and then you can install "powerline-shell"
+## from here --> https://github.com/b-ryan/powerline-shell
+
+----
+## first install powerline fonts
+
+$ sudo apt-get install fonts-powerline
+
+----
+## install powerline-shell
+
+$ pip install powerline-shell
+
+## keed in mind that you will need to install it in system not in any the virtual enviroment.
+## and dont forget to add "pip or powerline-shell" PATH to your path ## direcoty.
+## like add this to your bashrc file
+
+$ export PATH="$HOME/.local/bin:$PATH"
+
+----
+
+## if you follow the instruction then you will also need to add this in you .bashrc file
+
+## these commands are for auto-complition
+
+shopt -s cdspell
+bind 'set completion-ignore-case on'
+
+
+function _update_ps1() {
+    PS1=$(powerline-shell $?)
+}
+
+if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
+
+-------------------------
+-------------------------
+
+## you will also need to genrate a config file 
+
+mkdir -p ~/.config/powerline-shell && \
+powerline-shell --generate-config > ~/.config/powerline-shell/config.json
+
+------------------------
+
+## to hide the username and hostname from the command prompt 
+## remove the segments from config file and it should look like this
+
+{
+  "segments": [
+    "virtual_env",
+    "ssh",
+    "cwd",
+    "git",
+    "hg",
+    "jobs",
+    "root"
+  ]
+}
+
+-------------------------

@@ -1,0 +1,115 @@
+---> https://napuzba.com/a/build-python3-source-ubuntu
+---> https://napuzba.com/a/build-python3-source-ubuntu/p2
+
+https://realpython.com/installing-python/#how-to-install-python-on-linux
+
+------------------------------------------------
+
+for linux:
+
+1. First, update your package manager and upgrade your packages:
+
+$ sudo apt-get update
+$ sudo apt-get upgrade
+
+
+2. Next, make sure you have all of the build requirements installed:
+
+# For apt-based systems (like Debian, Ubuntu, and Mint)
+$ sudo apt-get install -y make build-essential libssl-dev zlib1g-dev \
+       libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
+       libncurses5-dev libncursesw5-dev xz-utils tk-dev
+
+# For yum-based systems (like CentOS)
+$ sudo yum -y groupinstall "Development Tools"
+$ sudo yum -y install gcc openssl-devel bzip2-devel libffi-devel
+
+
+Step 3: Build Python
+
+1. Once you have the prerequisites and the TAR file, you can unpack the source into a directory. Note that the following command will create a new directory called Python-3.8.3 under the one you’re in:
+
+$ tar xvf Python-3.8.4.tgz
+$ cd Python-3.8.4
+
+2. Now you need to run the ./configure tool to prepare the build:
+
+$ ./configure --enable-optimizations --with-ensurepip=install
+
+The enable-optimizations flag will enable some optimizations within Python to make it run about 10 percent faster. Doing this may add twenty or thirty minutes to the compilation time. The with-ensurepip=install flag will install pip bundled with this installation.
+
+
+3. Next, you build Python using make. The -j option simply tells make to split the building into parallel steps to speed up the compilation. Even with the parallel builds, this step can take several minutes:
+
+$ make -j4
+
+4. Finally, you’ll want to install your new version of Python. You’ll use the altinstall target here to avoid overwriting the system Python. Since you’re installing into /usr/bin, you’ll need to run as root:
+
+$ sudo make altinstall
+
+
+Step 4: Verify Your Installation
+
+Test that the python3.8 --version command returns the latest version:
+
+$ python3.8 --version
+Python 3.8.4
+
+If you see Python 3.8.4, then you’re all set!
+
+If you have some extra time on your hands, you can also run the test suite to make sure everything is working properly on your system.
+
+To run the test suite, type the following command:
+
+$ python3.8 -m test
+
+You’ll probably want to find something else to do for a while, as your computer will be running tests for some time. If all the tests pass, then you can be confident that your brand-new Python build is working as expected!
+
+
+
+-----------------------
+-----------------------
+
+installation directory
+>>> /lib/python**
+
+package installation directory
+>>> ~/.local/lib/python**
+
+# **specific version python3, python3.9
+
+----------
+----------
+
+python3 [-V 3.8.X]
+# this will installed by default
+If not installed use this
+>>> sudo apt install python3
+
+To install python 3.9 use this
+>>> sudo apt install python3.9
+
+----------
+
+by default if pip is installed it is for python3.8 , check by this:
+>>> pip -V
+
+if not installed use this:
+>>> sudo apt install python3-pip
+
+pip3 is for python3.9
+# pip should be installed with the python3.9 version
+>>> python3.9 -m pip install pip
+>>> python3.9 -m pip install --upgrade
+
+# first create or chooes  the directory for your virtual enviroments
+# it will create a folder and will put all the file in it
+To make a virtualenv in python3.9 use this:
+>>> python3.9 -m virtualenv <name-of-env>
+
+
+
+------------
+
+for python tk / tkinter use this:
+>>> sudo apt-get install python3-tk

@@ -1,0 +1,75 @@
+
+----------
+Appearance
+----------
+
+Global theme
+    look and feel
+        -Breeze Dark
+        
+Plasma Style
+    -Breeze Dark
+        
+colors
+    -Breeze Dark
+    
+
+Application Style
+    widget style
+        -Breeze
+    *widnows decoration
+        -Breezemite
+    *Gnome Applicaton Style
+        -Dark-Olympic
+        or
+        -Mojave-dark
+        [prefer dark gtk3 theme]
+
+colors
+    -breeze dark
+
+fonts
+    -everything else : Nato sans = 9pt
+     small : Nato sans = 8pt
+     Fixed width : Hack = 10pt
+     
+
+icons
+    -papirus-dark
+
+cursors
+    - Breeze
+                
+---------
+Workspace
+---------
+
+workspace behavior
+    Genreal behavior
+        *-double click to open files and folder
+
+    Desktop Effects
+        **-Translucency
+            [moving window]
+        **-Screen Edge
+            [stop highlight]
+        **-Mouse Mark
+            [on]
+        **-Slide
+            [on]
+        **-Glide
+            [on]
+        
+windows managment
+    window behavior
+        Movement
+            -snap zone all = 5px
+            -snap window: only when overlapping
+            
+        advanced
+            **-Palacement 
+                [centered]
+
+
+-----------------------------------------------
+https://www.reddit.com/r/kde/comments/kzyvns/if_you_use_libreoffice_install_the_libreofficekde/

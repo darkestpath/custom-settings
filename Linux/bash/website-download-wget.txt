@@ -1,0 +1,14 @@
+wget \
+     --recursive \
+     --no-clobber \
+     --page-requisites \
+     --html-extension \
+     --convert-links \
+     --restrict-file-names=windows \
+     --domains linuxjourney.com \
+     --no-parent \
+        https://linuxjourney.com/
+
+
+# replace linuxjourney.com with you domain name
+# remember there are two places you need to edit

@@ -1,0 +1,18 @@
+##############################
+# --> ~/.bashrc
+# this is a bashrc file,
+# you can add these commands
+##############################
+
+# -----------------------------
+
+# This is for auto comlitaion
+
+$ shopt -s cdspell
+$ bind 'set completion-ignore-case on'
+
+# -----------------------------
+
+
+
+

@@ -1,0 +1,28 @@
+ 
+Global Theme
+	-Breeze Dark
+
+Plasma Style
+	-ChromeOS [Dark]
+
+Application Style
+	Application Style
+		-Lightly [from github]
+	GKT style
+		-Sierra-compact-dark-solid
+
+	Window Decorations
+		-McMojave [Dark]
+
+Colors
+	-ChromeOSDark
+
+Fonts
+	- Nato Sans 10pt
+	- Hack 10pt
+
+Icons
+	-Papirus-Dark
+
+
+

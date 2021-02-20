@@ -1,0 +1,4 @@
+# add app list here
+- ventoy
+- clonezilla
+- gparted

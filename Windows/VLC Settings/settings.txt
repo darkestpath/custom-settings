@@ -1,0 +1,5 @@
+first run for once atleast
+copy or repalce "vlcrc" file in this forlder address
+press win+R and paste> %appdata%/vlc
+or
+C:\Users\Harish\AppData\Roaming\vlc
